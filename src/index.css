@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Roboto:wght@100;300;400;500;700;900&family=Silkscreen:wght@400;700&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Roboto:wght@100;300;400;500;700;900&family=Silkscreen:wght@400;700&family=VT323&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,5 +15,18 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+  }
+
+  .spin {
+    animation: spin 1.5s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
   }
 }

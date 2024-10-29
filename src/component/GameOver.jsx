@@ -1,4 +1,4 @@
-const GameOver = () => {
+const GameOver = ({ onEnd }) => {
   return <div></div>;
 };
 

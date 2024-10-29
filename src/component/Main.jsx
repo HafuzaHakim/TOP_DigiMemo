@@ -1,12 +1,24 @@
 import { useState, useEffect } from "react";
 import Guide from "./Guide";
+import GameBoard from "./GameBoard";
 
 const URL = "https://digi-api.com/api/v1/digimon?level=child&pageSize=250";
 const baseList = [1, 15, 16, 98, 143, 349, 509, 715, 842, 891, 1292, 1440];
 
-const Tile = ({ status }) => {
+const Tile = () => {
   const [images, setImages] = useState(null);
   const [selectedDigimon, setSelectedDigimon] = useState([]);
+  const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
+  const [status, setStatus] = useState("start");
+
+  function gameStart() {
+    setStatus("play");
+  }
+
+  function gameEnd() {
+    setStatus("end");
+  }
 
   useEffect(() => {
     // Expilicitly adding loading timer for the purpose of displaying loading screen
@@ -23,9 +35,10 @@ const Tile = ({ status }) => {
   }, []);
 
   return (
-    <div className="container mx-auto grow">
-      {status === "start" && <Guide />}
-    </div>
+    <main className="container mx-auto grow">
+      {status === "start" && <Guide onStart={gameStart} />}
+      {status === "play" && <GameBoard />}
+    </main>
   );
 };
 

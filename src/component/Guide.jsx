@@ -1,4 +1,4 @@
-const Guide = ({ startGame }) => {
+const Guide = ({ onStart }) => {
   return (
     <div className="absolute inset-0 z-10 flex h-screen items-center justify-center bg-black/40 px-4 tracking-wide">
       <div className="flex w-fit flex-col gap-4 rounded-xl border-8 border-double border-orange-900 bg-orange-50 px-2 py-8 text-orange-900">
@@ -16,7 +16,7 @@ const Guide = ({ startGame }) => {
           <li>Good luck, and have fun testing your memory skills!</li>
         </ul>
         <button
-          onClick={startGame}
+          onClick={onStart}
           className="w-fit self-center rounded-xl border-2 border-orange-800 bg-orange-200/90 px-8 py-2 text-2xl font-bold hover:bg-orange-300"
         >
           Start
