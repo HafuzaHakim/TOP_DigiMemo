@@ -21,7 +21,7 @@ const Tile = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  return <div>This is a gameboard</div>;
+  return <div className="container mx-auto">This is a gameboard</div>;
 };
 
 export default Tile;
