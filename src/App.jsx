@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Header from "./component/Header";
-import Guide from "./component/Guide";
 import Tile from "./component/Tile";
+import Footer from "./component/Footer";
+import Guide from "./component/Guide";
 
 export default function App() {
   const [status, setStatus] = useState("start");
@@ -13,11 +14,10 @@ export default function App() {
   }
 
   return (
-    <div className="background relative h-screen">
+    <div className="background relative flex h-screen flex-col pt-2">
       <Header />
-      {status === "start" && <Guide startGame={startGame} />}
-      {status === "play" && <Tile />}
-      {status === "end" && <GameOver />}
+      <Tile status={status} />
+      <Footer />
     </div>
   );
 }
