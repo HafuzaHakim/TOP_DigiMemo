@@ -2,7 +2,7 @@ import github from "../asset/github.png";
 
 const Footer = () => {
   return (
-    <footer className="flex items-center justify-center gap-2 py-1 backdrop-blur-md">
+    <footer className="flex items-center justify-center gap-2 py-1 backdrop-blur-sm">
       <a href="https://github.com/HafuzaHakim/TOP_DigiMemo" className="w-6">
         <img src={github} alt="" className="block w-full" />
       </a>
