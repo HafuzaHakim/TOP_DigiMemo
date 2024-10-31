@@ -10,7 +10,7 @@
   }
 
   .background {
-    background-image: url("src/asset/background.avif");
+    background-image: url("/background.avif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
