@@ -1,6 +1,6 @@
 import Tilt from "react-parallax-tilt";
 
-const Cards = ({ digimons, selectedDigimon, handleClick }) => {
+const Cards = ({ digimons, handleClick }) => {
   return (
     <div className="flex flex-wrap justify-center gap-4 overflow-auto p-4">
       {digimons.map((digimon) => (

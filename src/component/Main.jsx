@@ -25,10 +25,6 @@ const Main = () => {
     setHasWin(false);
   }
 
-  function gameWin() {
-    setStatus(true);
-  }
-
   function assignBestScore() {
     score > bestScore && setBestScore(score);
   }
