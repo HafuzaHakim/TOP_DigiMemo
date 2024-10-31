@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Guide from "./Guide";
 import GameBoard from "./GameBoard";
 
@@ -24,7 +24,7 @@ const Main = () => {
   }
 
   return (
-    <main className="container mx-auto grow">
+    <main className="container mx-auto h-[calc(100vh-140px)] overflow-auto">
       {status === "start" && <Guide onStart={gameStart} />}
       {status === "play" && <GameBoard score={score} bestScore={bestScore} />}
     </main>
